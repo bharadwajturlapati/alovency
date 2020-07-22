@@ -2,11 +2,11 @@ import React from "react";
 import { View, StyleSheet } from "react-native";
 import { Text } from "react-native-elements";
 
-const CategoryHeader = () => {
+const CategoryHeader = (props) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.MonthText}>October 2019</Text>
-      <Text style={styles.AmountText}>200/1000</Text>
+      <Text style={styles.MonthText}>{props.month} {props.year}</Text>
+  <Text style={styles.AmountText}>{props.amountUsed}/{props.totalAmount}</Text>
     </View>
   );
 };
